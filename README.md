@@ -119,7 +119,7 @@ Then visit [http://localhost:3000](http://localhost:3000).
 ## 📝 Submission
 
 - **GitHub repo:** https://github.com/kollamorampavani/student-assignment-dashboard
-- **Demo video:** [your demo video link here]
+- **Demo video:** [https://drive.google.com/file/d/18aG_tk3H5w4PTONZWJgxUyYTqAS_M_aw/view?usp=sharing]
 
 ---
 
