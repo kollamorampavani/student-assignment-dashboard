@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# Student Assignment Dashboard – Joineazy Internship Task 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive, role-based assignment management dashboard built using React.js and Tailwind CSS.  
+All data is simulated client-side using browser localStorage.  
+This project fulfills Task 1: Assignment & Review Dashboard requirements for Joineazy.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+- **Vercel Demo:** https://student-assignment-dashboard-7iofgc1xm.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- **User Registration & Login**
+    - Users register with their name, ID, and role (student/teacher).
+    - Registered users log in with their credentials (checked against localStorage).
+- **Role-Based Dashboards**
+    - **Students:** View a list of all assignments, submit assignment links (with double-modal confirmation), and see completion status.
+    - **Teachers (Admins):** Create assignments (title, due date, Drive link), view progress bar for each assignment (student submissions), and see a list of submitted students with links.
+- **Progress Visualization:** Teachers see a visual bar for assignment uptake.
+- **Double Verification:** Students confirm their assignment submission twice for accuracy.
+- **Responsive UI/UX:** Mobile-first, adapts across devices, clean Tailwind styling.
+- **Component-Based Architecture:** Each major function is a React component for readability and maintenance.
+- **Persistent Data:** User, assignment, and submission data stored via browser localStorage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Stack / Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React.js**
+- **Tailwind CSS**
+- **HTML, CSS**
+- **No backend required!** (Simulated data only)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Folder Structure
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+student-assignment-dashboard/
+src/
+App.js
+index.js
+index.css
+components/
+Login.js
+StudentDashboard.js
+TeacherDashboard.js
+AssignmentSubmitModal.js
+AssignmentCreateModal.js
+AssignmentStatusBar.js
+SubmittedStudentsList.js
+package.json
+tailwind.config.js
+postcss.config.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧩 Component Overview
 
-## Learn More
+- **Login.js**: Handles user registration and login; interacts with localStorage.
+- **StudentDashboard.js**: Displays assignments, submission status, and entry modal for assignment link submission.
+- **AssignmentSubmitModal.js**: Double-confirmation modal for submitting assignment links.
+- **TeacherDashboard.js**: Allows creation/viewing of assignments, shows student progress and submissions.
+- **AssignmentCreateModal.js**: Modal for posting new assignments.
+- **AssignmentStatusBar.js**: Shows visual progress bar for student submissions.
+- **SubmittedStudentsList.js**: Lists students who have submitted with clickable links.
+- **App.js**: Handles top-level role-based routing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💾 How Data Is Simulated
 
-### Code Splitting
+- **Users, assignments, submissions** are saved and loaded from browser localStorage.
+- No real backend or server required.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📱 Running Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Clone repository:**
+git clone https://github.com/kollamorampavani/student-assignment-dashboard.git
+cd student-assignment-dashboard
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Install dependencies:**
+npm install
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Start the app:**
+npm start
 
-### Deployment
+Then visit [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🌍 Hosting/Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Fully deployable to Vercel as a static site.
+- Data stored per browser session via localStorage (no backend required).
+
+---
+
+
+
+## 📈 Design Decisions
+
+- **No backend:** Simulates all logic/data in local browser environment for rapid demo and review.
+- **Separation of concerns:** Teachers and students only access their own features/data.
+- **Double-confirm workflow:** Modal confirmation prevents accidental submissions.
+- **Progress indicators:** Give instant feedback on assignment completion.
+- **Component-based React:** Easy to maintain and expand.
+
+---
+
+## 📝 Submission
+
+- **GitHub repo:** https://github.com/kollamorampavani/student-assignment-dashboard
+- **Demo video:** [your demo video link here]
+
+---
+
+## 🙌 Credits
+
+Built for Joineazy – Frontend Intern Task (Assignment & Review Dashboard) by Kollamoram Pavani.
+
+---
+
+## 💡 Contact
+
+For questions, email kollamorampavani123@gmail.com
+
+---
+
+Thank you – ready for demo/interview!
