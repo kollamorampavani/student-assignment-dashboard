@@ -14,15 +14,24 @@ export default function TeacherDashboard({ user, logout }) {
   const [assignments, setAssignments] = useState(getAssignments());
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => { setAssignments(getAssignments()); }, []);
+  useEffect(() => {
+    setAssignments(getAssignments());
+  }, []);
 
   const addAssignment = (newAssignment) => {
     const id = Date.now();
-    const updated = [{ ...newAssignment, id, submissions: [] }, ...assignments];
+    const teacher_id = user.id;
+    const updated = [
+      { ...newAssignment, id, teacher_id, submissions: [] },
+      ...assignments
+    ];
     setAssignments(updated);
     updateAssignments(updated);
     setShowModal(false);
   };
+
+  // ✅ Show only assignments created by logged-in teacher
+  const teacherAssignments = assignments.filter(asg => asg.teacher_id === user.id);
 
   return (
     <div className="p-6">
@@ -34,10 +43,10 @@ export default function TeacherDashboard({ user, logout }) {
         className="bg-indigo-600 text-white px-4 py-2 rounded mb-4"
         onClick={() => setShowModal(true)}
       >Create Assignment</button>
-      {assignments.length === 0 ? (
+      {teacherAssignments.length === 0 ? (
         <div className="text-gray-500 italic">No assignments yet.</div>
       ) : (
-        assignments.map(asg => (
+        teacherAssignments.map(asg => (
           <div key={asg.id} className="bg-white p-4 mb-4 rounded shadow">
             <div className="font-semibold">{asg.title}</div>
             {asg.drive_link && (
