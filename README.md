@@ -44,24 +44,7 @@ This project was developed out of personal interest to explore **frontend–back
 ## 🏗️ Folder Structure
 
 ### 🖥️ Frontend
-student-assignment-dashboard/frontend
-│
-├── src/
-│ ├── App.js
-│ ├── index.js
-│ ├── index.css
-│ └── components/
-│ ├── Login.js
-│ ├── StudentDashboard.js
-│ ├── TeacherDashboard.js
-│ ├── AssignmentSubmitModal.js
-│ ├── AssignmentCreateModal.js
-│ ├── AssignmentStatusBar.js
-│ └── SubmittedStudentsList.js
-│
-├── package.json
-├── tailwind.config.js
-└── postcss.config.js
+<pre> <code> ``` student-assignment-dashboard/ frontend/ src/ App.js index.js index.css components/ Login.js StudentDashboard.js TeacherDashboard.js AssignmentSubmitModal.js AssignmentCreateModal.js AssignmentStatusBar.js SubmittedStudentsList.js package.json tailwind.config.js postcss.config.js backend/ server.js db.js model.js routes.js ``` </code> </pre>
 
 ### ⚙️ Backend
 backend/
