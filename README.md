@@ -64,12 +64,12 @@ This project was developed out of personal interest to explore **frontend–back
 └── postcss.config.js ``` </code> </pre>
 
 ### ⚙️ Backend
-```backend/
+<pre> <code> ``` backend/
 │
 ├── server.js
 ├── db.js
 ├── model.js
-└── routes.js```
+└── routes.js ``` </code> </pre>
 
 ---
 
