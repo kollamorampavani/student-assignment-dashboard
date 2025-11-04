@@ -88,8 +88,13 @@ This project was developed out of personal interest to explore **frontend–back
 
 ## 💾 Data Handling
 
-- For **frontend-only demo**, all data (users, assignments, submissions) is stored in **browser localStorage**.
-- For **full-stack setup**, backend APIs (Node.js + MySQL) can be used to persist data.
+- In the **deployed version (Vercel)**, all data — including users, assignments, and submissions — is **stored in browser localStorage**.  
+  This approach enables a fully functional demo without needing a live backend server.  
+- The project is also **backend-ready**: when connected with **Node.js and MySQL**, it can store and retrieve data **persistently** from a real database.  
+- This hybrid design supports both setups:
+  - **Frontend-only deployments** (for quick hosting on Vercel)  
+  - **Full-stack deployments** (for production with database integration)
+
 
 ---
 
@@ -128,11 +133,7 @@ Backend runs on http://localhost:3001
 
 ---
 
-## 🎥 Demo Video
 
-- Demo Video Link: [https://drive.google.com/file/d/18aG_tk3H5w4PTONZWJgxUyYTqAS_M_aw/view?usp=sharing](https://drive.google.com/file/d/18aG_tk3H5w4PTONZWJgxUyYTqAS_M_aw/view?usp=sharing)
-
----
 
 ## 📈 Design Highlights
 
