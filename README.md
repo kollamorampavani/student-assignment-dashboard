@@ -1,7 +1,8 @@
 # 🎓 Student Assignment Dashboard
 
 A fully responsive, role-based assignment management dashboard built using **React.js**, **Tailwind CSS**, and **Node.js (optional backend)**.  
-This project was developed out of personal interest to explore **frontend–backend integration, localStorage handling**, and **role-based dashboards**.
+This project demonstrates **frontend–backend integration, localStorage handling**, and **role-based dashboards** for managing assignments efficiently.
+
 
 ---
 
